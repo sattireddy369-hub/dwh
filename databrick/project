@@ -1,0 +1,41 @@
+The project starts with two source files, customerhistory.csv and customerincrement.csv. 
+We first ingest both files into the Bronze layer without applying significant transformations. 
+In the Silver layer, we clean and standardize the data, perform data quality checks, remove 
+duplicates, and implement incremental processing to identify new and updated customer records.
+We then merge the historical and incremental data into a trusted Silver customer table. 
+In the Gold layer, we apply the required business logic and create a dimensional data model, 
+such as a customer dimension and relevant fact tables. Finally, we orchestrate
+the complete Bronze-to-Silver-to-Gold pipeline using Databricks Workflows,
+add monitoring and data quality checks, and expose the Gold tables for reporting and analytics.
+
+plan:
+Inspect source CSVs and schemas
+Verify datamodel catalog schemas
+Author bronze ingestion notebooks
+Author silver cleaning + merge notebook
+Author gold dimensional model notebook
+Create orchestrating Lakeflow Job
+
+Customer Data Project
+│
+├── 01_Bronze_Ingestion
+│   ├── customer_history_ingestion
+│   └── customer_increment_ingestion
+│
+├── 02_Silver_Transformation
+│   ├── customer_cleaning
+│   └── customer_merge
+│
+├── 03_Gold_Data_Model
+│   └── customer_gold
+│
+└── 04_Orchestration
+    └── customer_pipeline
+
+
+Read Bronze sources (history + increment)
+Clean and standardize
+Data quality checks + quarantine
+Deduplicate — keep latest version per customer
+Incremental detection + MERGE into Silver + audit log
+Verify Silver table and audit
