@@ -1,0 +1,238 @@
+Databricks – Complete Project Roadmap Step by Step
+If you want to learn Databricks from beginner level to real-time project development, follow this roadmap in order. It covers the main topics, practical exercises, and an end-to-end data engineering project that you can use for interview preparation.
+1. Databricks learning roadmap
+Phase 1: Fundamentals
+Understand the data engineering basics before using Databricks.
+SQL fundamentals
+Python fundamentals
+Data warehouse vs. data lake
+ETL vs. ELT
+Batch processing vs. streaming
+Cloud basics: Azure, AWS, or GCP
+Phase 2: Databricks platform
+Workspace and notebooks
+Compute and Spark clusters
+Catalog Explorer
+Unity Catalog
+Files, volumes, and external storage
+Jobs and Workflows
+Phase 3: Apache Spark and PySpark
+Spark architecture
+DataFrames and Spark SQL
+Transformations and actions
+Joins, aggregations, and window functions
+Partitioning and shuffling
+Performance optimization
+Phase 4: Delta Lake and medallion architecture
+Delta tables
+ACID transactions
+Time travel
+Schema enforcement and evolution
+Bronze, Silver, and Gold layers
+Incremental data processing
+Phase 5: Data ingestion and pipelines
+CSV, JSON, and Parquet files
+Cloud object storage
+Auto Loader
+Lakeflow Spark Declarative Pipelines
+Batch and streaming pipelines
+Data quality checks
+Phase 6: Production and project deployment
+Workflow scheduling and dependencies
+Error handling and retries
+Logging and monitoring
+Unity Catalog permissions
+Git integration and CI/CD
+Cost and performance optimization
+2. End-to-end Databricks project
+A good first real-time-style project is an E-commerce Sales Data Engineering Pipeline. It helps you practise most of the skills expected in a Databricks data engineer role.
+Source systems
+Customers · Orders · Products · Payments · CSV/JSON files
+Bronze layer
+Ingest raw data with minimal changes
+Silver layer
+Clean, validate, deduplicate and join data
+Gold layer
+Business metrics and aggregated tables
+Reporting and consumption
+Databricks SQL dashboards or Power BI
+Project requirements
+Process daily orders, customers, products and payments.
+Store the raw data in the Bronze layer.
+Clean invalid records and remove duplicates in Silver.
+Calculate revenue, order counts and product performance in Gold.
+Schedule the pipeline to run automatically.
+Handle new data, failures and data quality issues.
+Monitor the pipeline and control access to data.
+3. Project implementation: step by step
+Follow these stages in sequence. Complete each stage before moving to the next.
+Why Traditional Data Engineering Is Dead (And What Comes Next) | by Ravish Kumar | Medium
+Step 1 — Requirement gathering
+Identify the source files, columns, refresh frequency, business rules and final reports.
+Deliverable: project requirements and source-to-target mapping.
+Create your first workflow with Lakeflow Jobs | Databricks on AWS
+Step 2 — Workspace setup
+Create your workspace, configure compute, set up a catalog and schema, and organize notebooks.
+Topics: compute, notebooks, Unity Catalog, permissions and storage access.
+#7 Persistência e Formatos de Dados: CSV, JSON e Parquet
+Step 3 — Ingest source data
+Load CSV, JSON or Parquet files into Databricks. Learn batch ingestion first, then incremental ingestion using Auto Loader.
+Deliverable: raw data available in Bronze tables.
+Analysis of Retail Data Insights With PySpark & Databricks -
+Step 4 — Transform data using PySpark
+Cast data types, handle null values, remove duplicates, apply business rules, join tables and validate records.
+Deliverable: clean Silver tables.
+Introduction to Star Schemas | Azure
+Step 5 — Create Gold tables
+Build sales summaries, daily revenue, monthly revenue, top products and customer metrics using Spark SQL or PySpark.
+Deliverable: reporting-ready business tables.
+Data Pipeline Orchestration: The Backbone of Modern Data Systems | by Nishtha Bodani | Medium
+Step 6 — Automate the pipeline
+Create Lakeflow Jobs or Workflows with task dependencies, schedules, retries, parameters and failure notifications.
+Deliverable: an automatically running pipeline.
+8 Essential Sales Dashboard Examples for Revenue Growth | GoodData
+Step 7 — Reporting
+Build Databricks SQL dashboards or connect Power BI to the Gold layer.
+Deliverable: sales and revenue reports.
+Lakeflowジョブのモニタリングと可観測性 | Databricks on AWS
+Step 8 — Testing and production readiness
+Test duplicate handling, invalid records, incremental loads, reruns, permissions, performance and recovery from failures.
+Deliverable: a tested, maintainable pipeline.
+4. Important PySpark and SQL topics to practise
+These are the coding topics you should learn before building the complete project.
+Topic
+What to practise
+DataFrame operations
+select, filter, withColumn, drop
+Data cleaning
+Null handling, type casting, duplicates
+Joins
+Inner, left, right and full joins
+Aggregations
+groupBy, sum, count, avg
+Window functions
+row_number, rank, lag, lead
+Delta Lake
+MERGE, updates, deletes, time travel
+Incremental loads
+Process only new or changed records
+Performance
+Partitioning, caching, explain, file optimization
+Error handling
+Exceptions, logging, retries and quarantine tables
+SQL
+CTEs, subqueries, joins and analytical queries
+Example: Create a Bronze table
+python
+orders_df = (
+    spark.read
+    .option("header", True)
+    .option("inferSchema", True)
+    .csv("/Volumes/main/raw/orders/orders.csv")
+)
+
+orders_df.write \
+    .format("delta") \
+    .mode("append") \
+    .saveAsTable("main.bronze.orders")
+This reads an orders CSV file and appends it to a Delta table. The catalog, schema and volume must exist, and the required permissions must be configured.
+Example: Clean the data in Silver
+python
+from pyspark.sql.functions import col, trim
+
+silver_orders = (
+    spark.table("main.bronze.orders")
+    .withColumn("order_id", trim(col("order_id")))
+    .withColumn("amount", col("amount").cast("double"))
+    .filter(col("order_id").isNotNull())
+    .filter(col("amount") >= 0)
+    .dropDuplicates(["order_id"])
+)
+
+silver_orders.write \
+    .format("delta") \
+    .mode("overwrite") \
+    .saveAsTable("main.silver.orders")
+This is a basic demonstration. For a production pipeline, consider how to handle multiple order updates, rejected records, audit columns and incremental processing instead of overwriting the entire table.
+Example: Create a Gold sales summary
+sql
+CREATE OR REPLACE TABLE main.gold.daily_sales AS
+SELECT
+    CAST(order_date AS DATE) AS sales_date,
+    COUNT(DISTINCT order_id) AS total_orders,
+    SUM(amount) AS total_revenue
+FROM main.silver.orders
+GROUP BY CAST(order_date AS DATE);
+This produces a daily sales table for dashboards and business reporting.
+5. Additional topics for real-time projects
+After completing the basic pipeline, learn these advanced topics:
+Delta Lake: ACID transactions, schema evolution, MERGE INTO and time travel.
+Auto Loader: Incremental file ingestion and schema handling.
+Structured Streaming: Processing continuously arriving events.
+Lakeflow Spark Declarative Pipelines: Building and managing declarative data pipelines.
+Unity Catalog: Data permissions, lineage, governance and discovery.
+Lakeflow Jobs: Scheduling tasks and managing dependencies.
+DevOps: Git, deployment workflows, testing and CI/CD.
+Performance tuning: Spark execution plans, shuffle reduction, data layout and file-size optimization.
+Security: Secrets management, least-privilege access and secure credentials.
+Monitoring: Job failures, data quality metrics, logs and operational alerts.
+6. Suggested 8-week learning plan
+Week
+Focus
+Practical outcome
+1
+Python, SQL and data engineering basics
+Read and query datasets
+2
+Databricks workspace and Spark fundamentals
+Run notebooks and create DataFrames
+3
+PySpark transformations and joins
+Clean and combine datasets
+4
+Delta Lake and medallion architecture
+Build Bronze, Silver and Gold
+5
+Ingestion and incremental processing
+Load new files reliably
+6
+Workflows, scheduling and data quality
+Automate the pipeline
+7
+SQL dashboards, security and optimization
+Prepare reporting tables
+8
+End-to-end project testing and interview preparation
+Complete and explain the project
+7. Choose your Databricks project environment
+I can tailor the full project to the cloud platform you want to learn.
+1. Which Databricks platform?
+
+Azure Databricks
+
+AWS Databricks
+
+Google Cloud Databricks
+
+Cloud-independent / learn the basics first
+2. What is your current level?
+
+Beginner — starting from zero
+
+Intermediate — know SQL or Python
+
+Experienced — want production projects
+3. What is your main goal?
+
+Data Engineer job preparation
+
+Real-time project implementation
+
+Certification preparation
+4. Which type of pipeline?
+
+Batch pipeline — daily or hourly files
+
+Streaming pipeline — continuously arriving events
+
+Both batch and streaming
