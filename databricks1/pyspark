@@ -1,0 +1,151 @@
+ Overall project lifecycle
+1. Source Systems
+SQL Server · Oracle · CSV · JSON · APIs · Kafka
+2. Data Ingestion
+Azure Data Factory · Auto Loader · Batch · Streaming
+3. Bronze Layer
+Raw data stored in Delta tables
+4. Silver Layer
+PySpark transformations · Cleansing · Deduplication · Validation
+5. Gold Layer
+Business logic · Aggregations · Reporting tables
+6. Consumption
+Power BI · SQL Warehouse · Analytics · Downstream applications
+2. End-to-end project tasks
+Select a phase to see the typical tasks performed by a Data Engineer.
+
+1. Requirements
+
+2. Environment setup
+
+3. Ingestion
+
+4. PySpark transformations
+Read Bronze tables with spark.read or Spark SQL
+Apply schema definitions and data type conversions
+Handle nulls, invalid records and duplicate data
+Use filter, select, withColumn, when and regexp functions
+Join multiple datasets using business keys
+Apply window functions, ranking and deduplication
+Implement business rules, aggregations and derived columns
+Write cleansed data into Silver and business-ready data into Gold
+
+5. Data quality
+
+6. Incremental loads
+
+7. Scheduling
+
+8. Performance
+
+9. Deployment
+
+10. Monitoring and support
+3. Example real-time project scenario
+Consider an e-commerce sales data engineering project built with Azure Databricks and PySpark.
+Lenda Dashboard - The Ultimate SQL Practice Platform
+Source data
+Orders from SQL Server
+Customer and product CSV files
+Daily transaction files in Azure Data Lake Storage
+Optional online event streams
+Analysis of Retail Data Insights With PySpark & Databricks -
+PySpark processing
+Clean customer and order data
+Remove duplicate order records
+Join orders with customer and product tables
+Calculate total sales, discounts and net revenue
+Process only new or changed records
+What is Databricks? | Databricks | QuickLearnPro
+Delta Lake tables
+Bronze: bronze_orders, bronze_customers
+Silver: silver_orders, silver_customers
+Gold: gold_daily_sales, gold_customer_summary
+Driving Growth with Sales & Customer Insights Dash... - Microsoft Fabric Community
+Business output
+Daily and monthly sales reports
+Customer purchase analysis
+Product performance and revenue trends
+Power BI dashboards
+4. Example PySpark tasks in Databricks
+Task 1: Read source data
+python
+from pyspark.sql import functions as F
+
+df = (
+    spark.read
+    .format("delta")
+    .table("main.bronze.orders")
+)
+Task 2: Clean and transform the data
+python
+clean_df = (
+    df
+    .filter(F.col("order_id").isNotNull())
+    .dropDuplicates(["order_id"])
+    .withColumn(
+        "order_date",
+        F.to_date("order_date")
+    )
+    .withColumn(
+        "total_amount",
+        F.col("quantity") * F.col("unit_price")
+    )
+)
+Task 3: Join multiple datasets
+python
+orders = spark.table("main.silver.orders")
+customers = spark.table("main.silver.customers")
+
+result_df = orders.join(
+    customers,
+    on="customer_id",
+    how="left"
+)
+Task 4: Create an aggregated Gold table
+python
+gold_df = (
+    result_df
+    .groupBy("order_date")
+    .agg(
+        F.countDistinct("order_id").alias("total_orders"),
+        F.sum("total_amount").alias("total_sales")
+    )
+)
+Task 5: Write the output to Delta Lake
+python
+(
+    gold_df.write
+    .format("delta")
+    .mode("overwrite")
+    .saveAsTable("main.gold.daily_sales")
+)
+This example uses a full overwrite for simplicity. In production, choose append, partition replacement or Delta MERGE according to the load strategy and whether the pipeline processes full or incremental data.
+5. Typical daily responsibilities of a PySpark Data Engineer
+Activity
+Typical work
+Development
+Write and maintain PySpark notebooks and Python modules
+Data ingestion
+Load files, database extracts and incremental changes
+Transformation
+Clean data, join tables and implement business rules
+Data quality
+Validate schemas, counts, duplicates and nulls
+Pipeline execution
+Run and troubleshoot Databricks Jobs
+Optimization
+Improve Spark performance and Delta table operations
+Deployment
+Use Git, code reviews and CI/CD
+Production support
+Resolve failed jobs, data issues and schema changes
+Collaboration
+Work with analysts, architects, testers and business teams
+6. Skills and technologies involved
+PySpark: DataFrames, Spark SQL, joins, window functions, UDFs and aggregations.
+Databricks: Notebooks, compute, Jobs, Delta Lake, Unity Catalog and Lakeflow.
+Azure: ADLS Gen2, Azure Data Factory, Key Vault and Microsoft Entra ID.
+Data engineering: ETL/ELT, incremental loading, CDC, data quality and medallion architecture.
+DevOps: Git, CI/CD, testing and environment deployments.
+SQL: Complex queries, CTEs, joins and analytical functions.
