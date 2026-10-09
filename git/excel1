@@ -1,0 +1,237 @@
+Microsoft Excel: Complete Topics for Data Analysis
+To become good at Data Analysis using Excel, you should learn everything from basic spreadsheet skills to advanced formulas, PivotTables, dashboards, and automation.
+Here is a complete Excel roadmap, arranged in the order you should learn it for a data analyst job.
+Excel Data Analyst Roadmap
+LT 1B: Prod. Software Basics - Kenowa Hills Middle School TechEd
+1. Excel Basics
+Beginner
+Workbook, worksheets, rows, columns and cells
+Data entry, editing and formatting
+Number, date, text and percentage formats
+Copy, paste, AutoFill and Flash Fill
+Freeze Panes, split windows and zoom
+Excel tables and named ranges
+Two Ways to Be More Efficient When Using Excel Data Filtering
+2. Data Cleaning and Preparation
+Essential for real-world data
+Sort and Filter
+Remove Duplicates
+Find and Replace
+Text to Columns
+Flash Fill
+TRIM, CLEAN and SUBSTITUTE
+Handling blank cells and missing values
+Correcting inconsistent dates and text
+Data Validation and drop-down lists
+Identifying errors and outliers
+Microsoft Excel Formulas You Need to Know in 30 Minutes! | Excel Classes | Skillshare
+3. Excel Formulas and Functions
+The core of Excel analysis
+Relative, absolute and mixed references
+Arithmetic operators and formula syntax
+SUM, AVERAGE, MIN, MAX and COUNT
+COUNTA, COUNTBLANK and SUBTOTAL
+IF, IFS, AND, OR and NOT
+SUMIF, SUMIFS, COUNTIF and COUNTIFS
+AVERAGEIF and AVERAGEIFS
+IFERROR and IFNA
+Nested IF formulas
+How To Use XLOOKUP in Excel [Step-by-Step Guide + Examples]
+4. Lookup and Reference Functions
+XLOOKUP and VLOOKUP
+HLOOKUP
+INDEX and MATCH
+XMATCH
+FILTER, SORT and SORTBY
+UNIQUE
+CHOOSE and INDIRECT
+Combining lookup functions
+Two-way lookups and multiple-criteria lookups
+How to Do Data Transformations in Excel: A Beginner's Guide | Airbyte
+5. Text, Date and Time Functions
+LEFT, RIGHT and MID
+LEN, FIND and SEARCH
+CONCAT, CONCATENATE and TEXTJOIN
+UPPER, LOWER and PROPER
+DATE, YEAR, MONTH and DAY
+TODAY and NOW
+EOMONTH, EDATE and DATEDIF
+WEEKDAY, WEEKNUM and WORKDAY
+NETWORKDAYS
+TEXT, VALUE and date conversions
+How to make and use Pivot Table in Excel
+6. PivotTables and PivotCharts
+One of the most important analyst skills
+Creating PivotTables
+Rows, Columns, Values and Filters
+Grouping dates by month, quarter and year
+Sum, Count, Average and percentage calculations
+Show Values As: percentage of total and difference
+Sorting and filtering PivotTables
+Slicers and Timelines
+PivotCharts
+Refreshing data and changing the source
+How to Make a Heat Map in Excel: Quick Step-by-Step Guide
+7. Data Visualization and Charts
+Column, bar, line and pie charts
+Area, scatter and bubble charts
+Histogram and Pareto charts
+Combo charts and secondary axes
+Waterfall and box-and-whisker charts
+Sparklines
+Conditional Formatting and heatmaps
+Data bars, color scales and icon sets
+Chart labels, titles and formatting
+Choosing the right chart for the data
+Excel ダッシュボードの作り方
+8. Interactive Dashboards and Reporting
+KPI cards and summary metrics
+Sales, profit and revenue dashboards
+Dynamic charts
+Slicers and drop-down controls
+Dynamic titles and reporting periods
+Conditional Formatting for KPIs
+Dashboard layout, colors and design
+Linking multiple PivotTables
+Printing and exporting reports
+Extra Empirical Project: Female labour supply and the macroeconomy – Working in Excel – Doing Economics
+9. Power Query (ETL)
+High-value skill for professional data analysis
+Import Excel, CSV, text and folder data
+Connect to databases and supported web sources
+Change data types
+Remove errors, duplicates and blank rows
+Split, merge and replace columns
+Pivot and Unpivot columns
+Group By and Aggregate
+Merge Queries (join tables)
+Append Queries (combine rows)
+Create custom and conditional columns
+Refresh queries automatically
+Understand basic M language
+Excel’s Power Pivot - Overview, How To Use, Benefits | Wall Street Oasis
+10. Power Pivot and Data Modeling
+Tables, relationships and keys
+Primary keys and foreign keys
+Fact and dimension tables
+Star schema fundamentals
+Data Model
+Calculated columns and measures
+Basic DAX functions: SUM, CALCULATE, DISTINCTCOUNT
+Time intelligence fundamentals
+Analyze large datasets using related tables
+Linear Regression: A Step-by-Step Guide Using Excel | by Katabathina | Medium
+11. Statistics and Analytical Techniques
+Mean, median, mode and range
+Variance and standard deviation
+Percentages, ratios and percentage change
+Quartiles, percentiles and outliers
+Correlation and covariance
+Trend analysis and moving averages
+Forecasting
+Regression analysis
+Hypothesis testing basics
+Descriptive Statistics and Analysis ToolPak
+Microsoft Excel What If Analysis – Softwareg.com.au
+12. What-If Analysis and Optimization
+Goal Seek
+Scenario Manager
+One-variable and two-variable Data Tables
+Solver
+Break-even analysis
+Sensitivity analysis
+Budget and profit modeling
+How to Move Entire Row to Another Sheet Based on Cell Value in Excel?
+13. Automation and Advanced Excel
+Record, run and edit macros
+VBA fundamentals
+Automating repetitive reports
+Office Scripts
+LAMBDA and reusable custom formulas
+LET for readable formulas
+Dynamic array formulas
+Formula auditing and error tracing
+Workbook protection and performance optimization
+Inventory Managemement Template Excel
+14. Real-World Data Analyst Projects
+Sales and revenue analysis
+Customer segmentation and retention
+Financial and expense analysis
+Inventory and stock analysis
+HR employee attrition analysis
+Marketing campaign performance
+Monthly business performance reports
+Interactive executive dashboards
+Essential formulas to master first
+Category
+Functions
+Basic calculations
+SUM, AVERAGE, MIN, MAX
+Counting
+COUNT, COUNTA, COUNTIF, COUNTIFS
+Conditional calculations
+IF, IFS, SUMIF, SUMIFS
+Lookups
+XLOOKUP, VLOOKUP, INDEX, MATCH
+Error handling
+IFERROR, IFNA
+Text cleaning
+TRIM, CLEAN, SUBSTITUTE, TEXTJOIN
+Date analysis
+YEAR, MONTH, EOMONTH, NETWORKDAYS
+Dynamic arrays
+FILTER, SORT, UNIQUE
+Advanced calculations
+LET, SUBTOTAL, AGGREGATE
+Note: Some functions, including XLOOKUP, FILTER, UNIQUE and LET, require a compatible Excel version, such as Microsoft 365 or Excel 2021 and later, depending on the function.
+Recommended learning order
+Your study checklist
+0/15 topics
+Stage 1 — Fundamentals
+Week 1
+
+Excel basics and formatting
+
+Sorting, filtering and data cleaning
+
+Basic formulas and cell references
+Stage 2 — Formulas
+Weeks 2–3
+
+IF and conditional functions
+
+Lookup functions
+
+Text and date functions
+Stage 3 — Analysis
+Week 4
+
+PivotTables and PivotCharts
+
+Charts and Conditional Formatting
+
+Descriptive statistics
+Stage 4 — Professional tools
+Weeks 5–6
+
+Power Query
+
+Data Model and basic DAX
+
+Interactive dashboards
+Stage 5 — Job preparation
+Weeks 7–8
+
+Complete 2–3 portfolio projects
+
+Build a sales dashboard
+
+Practice business questions and explain insights
+What else should you learn for a Data Analyst job?
+Excel is important, but combining it with these skills will make you more job-ready:
+SQL: SELECT, WHERE, GROUP BY, JOINs, subqueries and window functions.
+Power BI: data modeling, DAX, reports and interactive dashboards.
+Statistics: distributions, correlation, sampling and hypothesis testing.
+Business intelligence: KPIs, trends, profitability and communicating insights.
+Portfolio: practical projects using messy datasets and presenting actionable conclusions.
+My recommendation: Prioritize data cleaning, formulas, XLOOKUP, SUMIFS, PivotTables, charts, dashboards and Power Query first. Learn VBA and advanced statistical techniques after you are confident with the core skills.
