@@ -1,0 +1,94 @@
+1. Main tasks in a data project
+1. Data collection
+Gather data from CSV, Excel, databases, APIs, or websites.
+Python tools: pandas, requests, sqlite3
+2. Data cleaning
+Handle missing values, duplicates, incorrect formats, and inconsistent data.
+Python tools: pandas, numpy
+3. Exploratory data analysis (EDA)
+Explore patterns, trends, distributions, and relationships in the data.
+Python tools: pandas, matplotlib, seaborn
+4. Data visualization
+Create charts, graphs, dashboards, and reports.
+Python tools: matplotlib, seaborn, plotly
+5. Statistical analysis and machine learning
+Identify relationships, test hypotheses, predict outcomes, or group similar records.
+Python tools: scipy, statsmodels, scikit-learn
+6. Reporting and deployment
+Present findings, automate reports, or publish a data application.
+Python tools: Jupyter, Streamlit, FastAPI
+
+ Python data project ideas
+A Data Analytics Project with Python: Analysing Medical Data | by Natasha | Medium
+Beginner: Sales Data Analysis
+Calculate total sales and profit.
+Find the best-selling products.
+Compare monthly and regional sales.
+Create charts and a summary report.
+Best HR Dashboards 1546 in 2025 | Dashboard design template, Dashboard template, Dashboard design
+Beginner to intermediate: Employee Data Analysis
+Analyse salaries, departments, and employee turnover.
+Identify patterns in employee attrition.
+Create an HR dashboard.
+Introduction to Image Segmentation with K-Means clustering - KDnuggets
+Intermediate: Customer Segmentation
+Analyse customer purchasing behaviour.
+Group customers by spending patterns.
+Apply clustering with K-means.
+House Price Prediction Model Using Linear Regression with Scikit-Learn— A Step-by-Step Guide for Absolute Beginners | by Kamalesh Joshi | Medium
+Intermediate: House Price Prediction
+Clean property data.
+Explore relationships between property features and prices.
+Train and evaluate a regression model.
+sukhmani1303/store-sales-ts-forecasting · Hugging Face
+Advanced: Sales Forecasting
+Analyse historical sales.
+
+
+Typical Python project folder structure
+text
+data_project/
+├── data/
+│   ├── raw_data.csv
+│   └── cleaned_data.csv
+├── notebooks/
+│   └── analysis.ipynb
+├── src/
+│   ├── data_collection.py
+│   ├── data_cleaning.py
+│   ├── analysis.py
+│   └── visualization.py
+├── reports/
+│   └── final_report.pdf
+├── requirements.txt
+└── README.md
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# 1. Load data
+df = pd.read_csv("sales.csv")
+
+# 2. Inspect data
+print(df.head())
+print(df.info())
+print(df.isnull().sum())
+
+# 3. Clean data
+df = df.drop_duplicates()
+df = df.dropna(subset=["Sales"])
+
+# 4. Analyse data
+print("Total sales:", df["Sales"].sum())
+print(df.describe())
+
+# 5. Visualize data
+df["Sales"].plot(kind="hist", bins=20)
+plt.title("Sales Distribution")
+plt.xlabel("Sales")
+plt.show()
+
+# 6. Export cleaned data
+df.to_csv("cleaned_sales.csv", index=False)
+Identify seasonality and trends.
+Forecast future demand and compare predictions with actual results.
