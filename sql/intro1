@@ -1,0 +1,84 @@
+. Project workflow
+1. Project Planning
+Define the business problem, objectives, scope, and requirements.
+2. Data Collection
+Gather data from CSV files, Excel, databases, or other sources.
+3. Database Design
+Create tables, define data types, primary keys, foreign keys, and relationships.
+4. Data Cleaning
+Handle missing values, duplicates, inconsistent formats, and incorrect records.
+5. SQL Query Development
+Use SELECT, WHERE, JOIN, GROUP BY, subqueries, CTEs, and window functions.
+6. Data Analysis
+Calculate KPIs, identify trends, compare performance, and answer business questions.
+7. Testing and Validation
+Check query results, totals, data accuracy, and database performance.
+8. Reporting and Documentation
+Present findings in reports or dashboards and document SQL scripts and recommendations.
+
+
+Planning -- check list
+Define project objectives and business questions
+
+Identify data sources and requirements
+Database setup
+
+Create the database and tables
+
+Define primary keys, foreign keys, and constraints
+
+Import the source data
+Data preparation
+
+Check for NULL values and duplicates
+
+Standardise dates, text, and numeric formats
+
+Validate data quality
+SQL analysis
+
+Write filtering and sorting queries
+
+Perform JOINs and aggregations
+
+Use CASE statements and subqueries
+
+Apply CTEs and window functions
+
+Calculate KPIs and business metrics
+Quality assurance
+
+Validate results against source data
+
+Optimise slow queries
+
+Check edge cases and data consistency
+Delivery
+
+Prepare final SQL scripts
+Document findings and recommendations
+
+
+sales project:
+import customer, product, and sales data.
+Create and relate database tables.
+Clean duplicate orders and missing values.
+Calculate total sales and profit.
+Identify the best-selling products.
+Analyse monthly and yearly sales trends.
+Find top customers and regional performance.
+Compare sales against business targets.
+Optimise queries and prepare a final report.
+
+
+Final project deliverables
+At the end of the project, you should have:
+Database schema and table definitions.
+Cleaned and validated data.
+SQL scripts for analysis.
+KPI calculations and query results.
+Testing and validation notes.
+A final report or dashboard.
+Business insights and recommendations.
+
+Create a summary report or dashboard
