@@ -1,0 +1,92 @@
+Purpose of SQL projects
+1. Data extraction
+Retrieve required data from database tables using SELECT, WHERE, and JOIN.
+2. Data cleaning
+Identify missing values, duplicates, inconsistent records, and incorrect data.
+3. Data analysis
+Calculate totals, averages, growth rates, rankings, and trends.
+4. Business insights
+Use query results to identify problems, opportunities, and areas for improvement.
+
+
+Project type
+What you do with SQL
+Example project
+1. Data Cleaning
+Remove duplicates, handle NULLs, standardize data
+Clean a messy customer database
+2. EDA (Exploratory Data Analysis)
+Explore data, identify patterns, trends and outliers
+Explore sales and customer behavior
+3. Business Intelligence (BI)
+Create reports, KPIs and business summaries
+Monthly sales and revenue analysis
+4. Descriptive Analytics
+Understand what happened in the past
+Analyze yearly revenue and profit
+5. Diagnostic Analytics
+Investigate why something happened
+Find reasons for declining sales
+6. Advanced Analytics
+Cohort analysis, segmentation, retention and funnel analysis
+Customer retention and churn analysis
+7. Customer Analytics
+Analyze customer behavior and value
+RFM analysis and customer segmentation
+8. Product Analytics
+Analyze user journeys, engagement and conversions
+E-commerce conversion funnel
+9. Marketing Analytics
+Evaluate campaigns, acquisition and ROI
+Marketing campaign performance
+10. Financial Analytics
+Analyze costs, revenue, margins and profitability
+Profitability analysis by product
+11. Operational Analytics
+Analyze efficiency, delivery and inventory
+Supply chain and inventory optimization
+12. Predictive Analytics
+Prepare historical data for forecasting and predictive models
+Customer churn prediction using SQL features
+13. A/B Testing Analysis
+Compare control and treatment groups
+Measure the impact of a website redesign
+14. Data Engineering
+Build tables, transformations, ETL/ELT pipelines and data models
+Build a sales data warehouse
+15. Database Performance Optimization
+
+Beginner
+SQL fundamentals
+Sales analysis using SELECT, WHERE, GROUP BY
+Employee and department analysis
+Data cleaning and basic EDA
+Revenue and order summaries
+Cohort Analysis | Yehoon
+
+Intermediate
+Joins, CTEs and window functions
+Customer cohort and retention analysis
+RFM customer segmentation
+Sales growth and month-over-month trends
+Product funnel and repeat-purchase analysis
+BRIO
+
+Advanced
+Complex business problems
+Customer lifetime value (CLV) analysis
+Churn analysis and prediction feature engineering
+A/B test evaluation
+Market basket analysis using SQL
+Query optimization and data warehouse modeling
+
+Which SQL project types should you learn?
+EDA — understand the dataset.
+Data Cleaning — make the data reliable.
+Descriptive and Diagnostic Analytics — explain business performance.
+Advanced Analytics — cohort analysis, retention, RFM and funnels.
+BI Reporting — create KPIs and communicate findings.
+
+
+Improve query speed and database efficiency
+Optimize slow queries using indexes and execution plans
