@@ -1,0 +1,91 @@
+1. Data engineering with PySpark
+Load CSV, JSON and Parquet datasets.
+Clean missing and duplicate records.
+Filter, join, group and aggregate data.
+Transform raw data into curated tables.
+Didacticiel : Utiliser des exemples de tableaux de bord – Azure Databricks - Databricks SQL | Microsoft Learn
+2. Databricks SQL
+SELECT, WHERE, GROUP BY and JOIN.
+Window functions and CTEs.
+Find top customers and monthly revenue.
+Solve SQL interview questions.
+Unified Analytics, Two Roads: Comparing Fabric’s L... - Microsoft Fabric Community
+3. Delta Lake and ETL pipelines
+Bronze, Silver and Gold layers.
+Create and manage Delta tables.
+MERGE, upsert and incremental loads.
+Handle schema evolution and data quality.
+Which Cloud is the Best for Databricks: Azure, AWS, or GCP? | by Mariusz Kujawski | Medium
+4. Advanced Databricks
+Auto Loader and Structured Streaming.
+Workflows and job scheduling.
+Unity Catalog and permissions.
+Performance tuning and production pipelines.
+
+
+ Dataset loading
+CSV, JSON, Parquet, Excel and tables
+2
+PySpark transformations
+Filter, select, join, groupBy, aggregations and window functions
+3
+Databricks SQL
+Queries, CTEs, joins, ranking and analytical problems
+4
+Data cleaning
+Nulls, duplicates, incorrect data types and validation
+5
+ETL pipelines
+Build Bronze, Silver and Gold layers
+6
+Delta Lake
+MERGE, upserts, incremental loads and time travel
+7
+Advanced engineering
+Auto Loader, streaming, Workflows and performance tuning
+8
+Real-world projects
+Build an end-to-end data pipeline with a dataset 
+
+
+
+Project type
+Purpose
+Example project
+1. Data Engineering / ETL
+Extract, transform, and load data from multiple sources
+Build ETL pipelines using PySpark and Delta Lake
+2. Data Lakehouse
+Store and process structured and unstructured data in one platform
+Build a lakehouse using Bronze, Silver, and Gold layers
+3. Real-Time Data Processing
+Process streaming data with low latency
+Real-time fraud detection or IoT monitoring
+4. Data Warehousing & BI
+Prepare data for reporting and business intelligence
+Sales analytics using Databricks SQL and Power BI
+5. Data Migration
+Move data from legacy systems to Databricks
+Migrate data from SQL Server, Snowflake, or Hadoop
+6. Machine Learning (ML)
+Train, track, and deploy predictive models
+Customer churn prediction or credit-risk modelling
+7. Generative AI / LLM
+Build applications using large language models
+Enterprise chatbot using company documents
+8. Data Governance & Security
+Manage data access, lineage, and compliance
+Implement Unity Catalog and role-based access
+9. Data Quality
+Detect and resolve inaccurate or incomplete data
+Automated data validation and anomaly detection
+10. Performance & Cost Optimisation
+Improve query speed and reduce compute costs
+Optimise Spark jobs, clusters, and Delta tables
+
+
+Common ETL tools
+Python: Data extraction and transformation scripts.
+SQL: Data cleaning, joins, and aggregations.
+Apache Airflow: Scheduling and orchestrating pipeline tasks.
+Azure Data Factory: Cloud-based data integration.
