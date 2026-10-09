@@ -3,19 +3,18 @@ Load CSV, JSON and Parquet datasets.
 Clean missing and duplicate records.
 Filter, join, group and aggregate data.
 Transform raw data into curated tables.
-Didacticiel : Utiliser des exemples de tableaux de bord – Azure Databricks - Databricks SQL | Microsoft Learn
+
 2. Databricks SQL
 SELECT, WHERE, GROUP BY and JOIN.
 Window functions and CTEs.
 Find top customers and monthly revenue.
-Solve SQL interview questions.
-Unified Analytics, Two Roads: Comparing Fabric’s L... - Microsoft Fabric Community
+
 3. Delta Lake and ETL pipelines
 Bronze, Silver and Gold layers.
 Create and manage Delta tables.
 MERGE, upsert and incremental loads.
 Handle schema evolution and data quality.
-Which Cloud is the Best for Databricks: Azure, AWS, or GCP? | by Mariusz Kujawski | Medium
+
 4. Advanced Databricks
 Auto Loader and Structured Streaming.
 Workflows and job scheduling.
