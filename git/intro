@@ -1,0 +1,136 @@
+Overall project workflow
+1. Data Collection
+CSV, Excel, SQL databases, APIs
+2. Data Cleaning & Processing
+Python, Pandas, SQL, Jupyter Notebook
+3. Analysis & Visualization
+EDA, reports, charts, dashboards
+4. Version Control with Git
+Track changes, branches, commits
+5. Upload & Collaborate on GitHub
+Remote repository, pull requests, teamwork
+6. Documentation & Final Delivery
+README, results, project report
+2. Main project tasks checklist
+Project task tracker
+0/25 completed
+1. Project setup
+
+Create a project folder
+
+Install Git and configure username and email
+
+Create a GitHub account
+
+Create a GitHub repository
+
+Initialize Git in the local project
+2. Data management
+
+Collect and organize raw data
+
+Create data cleaning and preprocessing scripts
+
+Perform exploratory data analysis (EDA)
+
+Build visualizations and reports
+
+Keep sensitive data and credentials out of GitHub
+3. Git version control
+
+Check changes using git status
+
+Stage files using git add
+
+Save changes using git commit
+
+Create branches for new features
+
+Merge completed work into the main branch
+4. GitHub collaboration
+
+Connect local repository to GitHub
+
+Push commits to GitHub
+
+Pull the latest team changes
+
+Create issues to track tasks
+
+Create pull requests and review code
+5. Final delivery
+
+Write a README.md file
+
+Document installation and execution steps
+
+Add requirements.txt or environment configuration
+
+Upload final code and reports
+
+Verify the repository and share its URL
+3. Essential Git commands
+Task
+Command
+Initialize Git
+git init
+Check file changes
+git status
+Stage all changes
+git add .
+Commit changes
+git commit -m "Add data analysis"
+Create a branch
+git branch feature-analysis
+Switch branches
+git switch feature-analysis
+View commit history
+git log --oneline
+Connect to GitHub
+git remote add origin <URL>
+Push to GitHub
+git push -u origin main
+Get latest changes
+git pull origin main
+4. Recommended project folder structure
+text
+
+data-analysis-project/
+├── data/
+│   ├── raw/
+│   └── processed/
+├── notebooks/
+│   └── exploratory_analysis.ipynb
+├── src/
+│   ├── data_cleaning.py
+│   └── analysis.py
+├── reports/
+│   └── final_report.pdf
+├── visuals/
+├── tests/
+├── requirements.txt
+├── .gitignore
+└── README.md
+Important: Large datasets and confidential information should generally not be committed to a public GitHub repository. Use .gitignore for local files that should not be tracked.
+5. Example end-to-end workflow
+bash
+# 1. Create a project
+mkdir data-analysis-project
+cd data-analysis-project
+
+# 2. Initialize Git
+git init
+
+# 3. Add project files
+git add .
+
+# 4. Save a version
+git commit -m "Initial project setup"
+
+# 5. Connect your GitHub repository
+git remote add origin https://github.com/USERNAME/REPOSITORY.git
+
+# 6. Push your work
+git branch -M main
+git push -u origin main
+Replace USERNAME and REPOSITORY with your actual GitHub username and repository name.
