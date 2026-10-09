@@ -1,0 +1,7 @@
+Your project should include:
+Problem statement: What business problem are you investigating?
+Data cleaning: How did you handle missing values, duplicates, and incorrect data?
+Analysis: What trends and comparisons did you discover?
+Visualizations: Which charts help explain the results?
+Recommendations: What should the business do based on your findings?
+Reproducibility: Instructions for running the code and installing dependencies.
