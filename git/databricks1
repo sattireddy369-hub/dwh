@@ -1,0 +1,348 @@
+Databricks: Complete Topics for Data Analysis
+Databricks is a cloud-based data and AI platform used for data engineering, data analysis,
+  data science, and machine learning. If you want to become a Data Analyst using Databricks, 
+focus on SQL, Python, PySpark, data transformation, Delta Lake, data visualization, 
+and performance optimization.
+Below is a complete learning roadmap, from beginner to advanced, with the topics commonly 
+  needed for data analyst roles.
+1. Complete Databricks syllabus
+Getting to Know the Databricks Notebook: A Complete Guide | DataCamp
+1. Databricks fundamentals
+Beginner
+What is Databricks and why it is used
+Lakehouse architecture
+Apache Spark fundamentals
+Workspace, notebooks and folders
+Compute, clusters and SQL warehouses
+Catalog Explorer and Unity Catalog
+Databricks SQL editor
+Workspaces, permissions and access control
+Query Output | Sisense for Cloud Data Teams
+2. SQL for data analysis
+Essential — highest priority
+SELECT, DISTINCT, WHERE, ORDER BY
+GROUP BY and HAVING
+Aggregate functions: SUM, COUNT, AVG, MIN, MAX
+Joins: INNER, LEFT, RIGHT, FULL, CROSS
+UNION and UNION ALL
+Subqueries and Common Table Expressions (CTEs)
+CASE WHEN and conditional logic
+String, date and timestamp functions
+NULL handling and data type conversion
+Window functions: ROW_NUMBER, RANK, DENSE_RANK, LAG, LEAD
+Running totals, moving averages and ranking
+Views, temporary views and query execution plans
+Jupyter Notebooks Tutorial for Beginners! - DEV Community
+3. Python for data analysis
+Beginner to intermediate
+Variables, data types and operators
+Lists, tuples, dictionaries and sets
+Conditions, loops and functions
+Exception handling and modules
+Pandas and NumPy basics
+Reading CSV, JSON and other supported formats
+Data cleaning and missing values
+DataFrames, filtering, grouping and aggregation
+Date handling and exploratory data analysis
+Matplotlib and Seaborn fundamentals
+pyspark - Spark Error when running python script on databricks - Stack Overflow
+4. PySpark
+Essential for large datasets
+SparkSession and Spark DataFrames
+Reading and writing datasets
+select(), filter(), withColumn(), drop()
+withColumnRenamed() and cast()
+groupBy() and agg()
+Joins and unions
+Handling nulls and duplicates
+Built-in functions and date/string functions
+Window specifications and ranking
+UDFs and pandas UDFs
+Lazy evaluation, transformations and actions
+Narrow vs. wide transformations
+Partitions, shuffles and caching
+What is Databricks? | Databricks | QuickLearnPro
+5. Delta Lake and data storage
+Core Databricks knowledge
+Data lake vs. data warehouse vs. lakehouse
+Delta tables and transaction logs
+ACID transactions
+Managed and external tables
+CREATE, INSERT, UPDATE, DELETE and MERGE
+Schema enforcement and schema evolution
+Time travel and table history
+Constraints and table properties
+Partitioning and file management
+Data lifecycle and retention
+Parquet, CSV, JSON and other file formats
+Didacticiel : Utiliser des exemples de tableaux de bord – Azure Databricks - Databricks SQL| Microsoft Learn
+6. Databricks SQL and dashboards
+Essential for analyst roles
+SQL warehouses and query editor
+Query parameters and filters
+Visualizations and dashboard creation
+KPI cards, tables and charts
+Dashboard filters and interactivity
+Scheduled dashboard refreshes
+Query history and query profiles
+Alerts and subscriptions
+Connecting BI tools such as Power BI and Tableau
+Data storytelling and business reporting
+2. Data engineering and ETL concepts
+Even if your target is data analysis, you should understand how data arrives in Databricks 
+  and becomes ready for reporting.
+ETL and ELT: Extract, Transform, Load; Extract, Load, Transform
+Data ingestion from CSV, Excel, JSON, Parquet and databases
+Batch processing and incremental data loading
+Connecting to cloud storage such as Azure Data Lake Storage, Amazon S3 and Google Cloud Storage
+JDBC connections and external data sources
+Reading files with Auto Loader
+Data cleansing, validation and standardization
+Deduplication and handling late-arriving data
+Data quality checks and reconciliation
+Incremental loads and change data capture (CDC)
+Schema drift and schema evolution
+Data pipeline troubleshooting
+Medallion architecture
+Bronze — Raw data
+Ingest source data with minimal changes; preserve the original information.
+Silver — Cleaned data
+Clean records, remove duplicates, validate types and join related datasets.
+Gold — Business-ready data
+Create aggregated tables, business metrics, reporting datasets and KPI summaries.
+Example: Raw sales files → cleaned sales transactions → monthly revenue by product and region.
+This architecture is a common Databricks design pattern, not a requirement for every project.
+3. Advanced SQL topics for interviews
+Give these topics special attention because they are common in data analyst technical assessments.
+Topic
+What to learn
+Joins
+Joining customers, orders, products and transactions
+CTEs
+Breaking complex queries into readable steps
+Window functions
+Ranking, running totals and previous-period comparisons
+Date analysis
+Month-over-month and year-over-year growth
+Conditional aggregation
+Sales by category, region or status
+Deduplication
+Finding and retaining the correct record
+NULL handling
+COALESCE, NULLIF and correct aggregate behavior
+Business metrics
+Revenue, profit, conversion rate and retention
+Query optimization
+Reading query plans and reducing unnecessary work
+Data modelling
+Fact tables, dimension tables and star schemas
+Example of a monthly sales analysis query:
+sql
+SELECT
+    DATE_TRUNC('MONTH', order_date) AS sales_month,
+    region,
+    SUM(sales_amount) AS total_sales,
+    COUNT(DISTINCT order_id) AS total_orders,
+    AVG(sales_amount) AS average_order_value
+FROM gold_sales
+WHERE order_status = 'Completed'
+GROUP BY
+    DATE_TRUNC('MONTH', order_date),
+    region
+ORDER BY sales_month, region;
+Practice writing queries independently and explaining what each result means for the business.
+4. Unity Catalog and data governance
+Unity Catalog is Databricks' centralized data governance solution. Learn:
+Metastore, catalog, schema and table hierarchy
+Three-level naming: catalog.schema.table
+Managed and external tables
+Grants, privileges and access control
+Users, groups and service principals
+Row filters and column masks
+Data lineage and auditing
+Discovering datasets through Catalog Explorer
+Data ownership and permissions
+Secure access to external storage
+For an analyst, knowing how to discover tables, understand lineage and request or use appropriate permissions is particularly important.
+5. Workflows and orchestration
+Learn how Databricks jobs automate recurring data tasks.
+Jobs and tasks
+Notebook tasks and SQL tasks
+Task dependencies and job graphs
+Schedules and triggers
+Parameters and widgets
+Retries, timeouts and failure handling
+Job monitoring and run history
+Notifications and alerts
+Task outputs and dependencies
+Git integration and deployment basics
+Lakeflow Jobs and Lakeflow Spark Declarative Pipelines concepts
+A typical workflow might run ingestion, clean the data, update the gold tables and refresh a reporting dashboard.
+6. Performance optimization
+These topics become more important as datasets grow.
+Spark execution plans and stages
+Query profiles and Spark UI
+Partitioning and data skew
+Shuffle operations
+Broadcast joins and join strategies
+Predicate and partition pruning
+Column pruning
+Caching and persistence
+Adaptive Query Execution (AQE)
+File sizes and small-file problems
+Delta Lake compaction and data skipping
+OPTIMIZE and ANALYZE TABLE
+Statistics and query plan interpretation
+Choosing appropriate compute resources
+Cost monitoring and warehouse sizing
+For data analyst roles, start with query profiles, efficient SQL, sensible joins and avoiding unnecessary data scans. Learn deeper Spark tuning after the fundamentals.
+7. Data modelling and business intelligence
+Data modelling is the bridge between raw data and reliable business reporting.
+Relational database concepts and primary/foreign keys
+Fact and dimension tables
+Star schema and snowflake schema
+Grain of a dataset
+Slowly changing dimensions (SCD Type 1 and Type 2)
+Surrogate keys and natural keys
+One-to-one, one-to-many and many-to-many relationships
+Measures, dimensions and calculated metrics
+KPI definitions and business rules
+Semantic models and reusable reporting datasets
+Connecting Databricks to Power BI or Tableau
+Import versus DirectQuery concepts in Power BI
+Dashboard refresh and data consistency
+Important: Learn how to build a reliable reporting table in Databricks and then use it to create a dashboard in your chosen BI tool.
+8. Data quality and statistical analysis
+These are important for day-to-day analytical work.
+Missing-value analysis
+Duplicate detection
+Outlier identification
+Data validation and reconciliation
+Descriptive statistics: mean, median, mode and standard deviation
+Percentiles and distributions
+Correlation versus causation
+Sampling and bias
+Hypothesis testing fundamentals
+Confidence intervals
+Trend and seasonality analysis
+Cohort and retention analysis
+Funnel and conversion analysis
+Root-cause analysis
+KPI monitoring and anomaly investigation
+9. Additional Databricks topics
+These topics broaden your understanding but are generally lower priority for a beginner data analyst.
+Streaming and real-time analytics
+Structured Streaming
+Streaming DataFrames
+Checkpoints and streaming output modes
+Watermarks and late-arriving events
+Real-time event processing
+Lakeflow streaming pipelines
+Git and software development practices
+Git repositories and branches
+Commit, push, pull and merge
+Pull requests and code reviews
+Notebook version control
+Development, test and production environments
+Testing and deployment workflows
+Data science and machine learning
+Exploratory data analysis
+Feature engineering
+MLflow experiment tracking
+Model evaluation and deployment concepts
+Databricks Machine Learning
+AI and generative AI fundamentals
+Cloud and platform fundamentals
+Azure Databricks, AWS Databricks or Databricks on Google Cloud
+Cloud storage and identity permissions
+Networking fundamentals
+Secrets and credentials management
+Compute policies and cost management
+Environment configuration
+You do not need to master every advanced topic before applying for data analyst jobs. Build a strong foundation in SQL, Python, Databricks SQL, Delta Lake and data modelling first.
+10. Practical projects to build
+A Data Analytics Project with Python: Analysing Medical Data | by Natasha | Medium
+Project 1: Sales analytics dashboard
+Beginner
+Load sales and customer datasets.
+Clean the data using SQL.
+Calculate revenue, profit, average order value and monthly growth.
+Create gold reporting tables and a dashboard.
+PulseOps | SaaS E-commerce Analytics & Operations Platform by Yuliya Lebedeva on Dribbble
+Project 2: Customer and retention analytics
+Intermediate
+Join customer, order and product tables.
+Calculate repeat purchases and customer retention.
+Use CTEs and window functions.
+Segment customers and identify valuable customer groups.
+FigLab — AI-Powered Scientific Visualization
+Project 3: End-to-end Databricks pipeline
+Intermediate
+Ingest raw CSV or JSON data.
+Create Bronze, Silver and Gold Delta tables.
+Implement data quality checks and incremental processing.
+Schedule the workflow and monitor failures.
+Connect a BI dashboard to the Gold layer.
+For each project, keep the source data, SQL or Python code, business questions, data quality checks, screenshots of the dashboard and a short explanation of the findings. This provides useful material for your CV and interviews.
+11. Recommended learning order
+Follow this sequence rather than learning all topics at once.
+8-week study plan
+0 of 7 completed
+
+Weeks 1–2
+SQL fundamentals
+Filtering, joins, aggregations, CTEs, subqueries and window functions
+
+Week 3
+Databricks fundamentals
+Workspace, notebooks, compute, SQL warehouses and Catalog Explorer
+
+Week 4
+Python and PySpark
+DataFrames, transformations, joins, cleaning and aggregation
+
+Week 5
+Delta Lake and data modelling
+Delta tables, medallion architecture, fact and dimension tables
+
+Week 6
+Databricks SQL and dashboards
+Queries, KPIs, visualizations and Power BI integration
+
+Week 7
+ETL and workflows
+Data ingestion, incremental loads, jobs, quality checks and monitoring
+
+Week 8
+Project and interview preparation
+Complete one end-to-end project and practise SQL interview questions
+Suggested pace: 1–2 hours daily. Adjust the schedule based on your current SQL and Python skills.
+12. Official learning resources
+Databricks — 
+Official documentation 
+Databricks free training and learning 
+Databricks SQL documentation 
+PySpark documentation 
+Delta Lake documentation 
+13. What should you prioritise for a Data Analyst job?
+Priority
+Topics
+Must learn first
+SQL, joins, CTEs, window functions, aggregations
+Core Databricks
+Workspace, notebooks, SQL warehouses, Delta tables
+Data preparation
+Python basics, PySpark, cleaning and validation
+Reporting
+Databricks SQL, dashboards, Power BI or Tableau
+Strong advantage
+ETL, medallion architecture, data modelling, Unity Catalog
+Advanced
+Spark optimization, streaming, MLflow and machine learning
+My recommendation: If your goal is specifically to become a Databricks Data Analyst, spend around 60–70% of your initial study time on SQL, data analysis and reporting, and the rest on Databricks fundamentals, PySpark and Delta Lake. Then build two practical projects.
+One question so I can tailor the syllabus for you: Are you a complete beginner, or do you already know SQL and want to learn Databricks for interviews?
+
+ChatGPT is AI and can make mistakes.
+
+
+
