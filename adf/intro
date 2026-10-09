@@ -1,0 +1,158 @@
+Phase 1: Requirement Gathering and Analysis
+Understand business requirements and data flows.
+Identify source systems, target systems, and data volumes.
+Gather source-to-target mapping documents.
+Define data refresh frequency, SLAs, and dependencies.
+Identify data quality rules and transformation requirements.
+
+Phase 2: Architecture and Environment Setup
+Design the ADF architecture and data ingestion strategy.
+Create development, test, and production environments.
+Configure Azure Data Factory and Azure integration resources.
+Set up Azure Data Lake Storage, Azure SQL Database, or other targets.
+Configure managed identities, RBAC, Key Vault, and networking.
+Select integration runtime types and connectivity methods.
+
+Phase 3: Source and Target Connectivity
+Create linked services for source and target systems.
+Configure datasets and connection parameters.
+Establish connectivity to databases, files, APIs, and cloud storage.
+Test authentication, permissions, and network access.
+Parameterize connections where appropriate.
+
+Phase 4: Pipeline Development
+Develop ingestion pipelines using Copy Activity.
+Build full-load and incremental-load pipelines.
+Implement watermark-based or change-data-capture ingestion where supported.
+Create reusable, metadata-driven pipelines.
+Implement Lookup, ForEach, If Condition, Switch, and Execute Pipeline activities.
+Configure triggers, schedules, dependencies, and retries.
+Implement logging, error handling, and alerts.
+
+Phase 5: Data Transformation
+Implement transformations using Mapping Data Flows, SQL, Databricks, or other processing services as required.
+Apply cleansing, filtering, joins, aggregations, and business rules.
+Handle null values, duplicates, and invalid records.
+Implement schema validation and reject handling.
+Optimize transformation performance and data partitioning.
+
+Phase 6: Testing and Validation
+Perform unit testing of individual pipelines.
+Validate source-to-target record counts and data accuracy.
+Test incremental loads, reruns, and duplicate prevention.
+Perform integration and end-to-end testing.
+Test failure scenarios, retries, and recovery procedures.
+Conduct performance testing and business user acceptance testing (UAT).
+
+Phase 7: Deployment and Release Management
+Integrate ADF with Azure DevOps or GitHub.
+Maintain development branches and pull-request reviews.
+Configure CI/CD deployment pipelines.
+Deploy ADF resources using supported ARM templates or deployment mechanisms.
+Manage environment-specific parameters and secrets.
+Validate production connections, triggers, and permissions.
+Prepare rollback and release plans.
+
+Phase 8: Monitoring and Production Support
+Monitor pipeline execution and activity run history.
+Configure Azure Monitor alerts and diagnostic logging.
+Troubleshoot failed activities and connectivity issues.
+Reprocess failed data and manage pipeline reruns.
+Monitor throughput, execution duration, and resource costs.
+
+1. Project phases and key tasks
+Phase 1: Requirement Gathering and Analysis
+Understand business requirements and data flows.
+Identify source systems, target systems, and data volumes.
+Gather source-to-target mapping documents.
+Define data refresh frequency, SLAs, and dependencies.
+Identify data quality rules and transformation requirements.
+Phase 2: Architecture and Environment Setup
+Design the ADF architecture and data ingestion strategy.
+Create development, test, and production environments.
+Configure Azure Data Factory and Azure integration resources.
+Set up Azure Data Lake Storage, Azure SQL Database, or other targets.
+Configure managed identities, RBAC, Key Vault, and networking.
+Select integration runtime types and connectivity methods.
+Phase 3: Source and Target Connectivity
+Create linked services for source and target systems.
+Configure datasets and connection parameters.
+Establish connectivity to databases, files, APIs, and cloud storage.
+Test authentication, permissions, and network access.
+Parameterize connections where appropriate.
+Phase 4: Pipeline Development
+Develop ingestion pipelines using Copy Activity.
+Build full-load and incremental-load pipelines.
+Implement watermark-based or change-data-capture ingestion where supported.
+Create reusable, metadata-driven pipelines.
+Implement Lookup, ForEach, If Condition, Switch, and Execute Pipeline activities.
+Configure triggers, schedules, dependencies, and retries.
+Implement logging, error handling, and alerts.
+Phase 5: Data Transformation
+Implement transformations using Mapping Data Flows, SQL, Databricks, or other processing services as required.
+Apply cleansing, filtering, joins, aggregations, and business rules.
+Handle null values, duplicates, and invalid records.
+Implement schema validation and reject handling.
+Optimize transformation performance and data partitioning.
+Phase 6: Testing and Validation
+Perform unit testing of individual pipelines.
+Validate source-to-target record counts and data accuracy.
+Test incremental loads, reruns, and duplicate prevention.
+Perform integration and end-to-end testing.
+Test failure scenarios, retries, and recovery procedures.
+Conduct performance testing and business user acceptance testing (UAT).
+Phase 7: Deployment and Release Management
+Integrate ADF with Azure DevOps or GitHub.
+Maintain development branches and pull-request reviews.
+Configure CI/CD deployment pipelines.
+Deploy ADF resources using supported ARM templates or deployment mechanisms.
+Manage environment-specific parameters and secrets.
+Validate production connections, triggers, and permissions.
+Prepare rollback and release plans.
+Phase 8: Monitoring and Production Support
+Monitor pipeline execution and activity run history.
+Configure Azure Monitor alerts and diagnostic logging.
+Troubleshoot failed activities and connectivity issues.
+Reprocess failed data and manage pipeline reruns.
+Monitor throughput, execution duration, and resource costs.
+Perform root-cause analysis and implement permanent fixes.
+Maintain operational runbooks and support documentation.
+2. Typical ADF project deliverables
+Deliverable
+Description
+Requirement document
+Business and technical requirements
+Source-to-target mapping
+Column mappings and transformation rules
+Solution architecture
+Data flow, services, security, and connectivity
+ADF pipelines
+Ingestion and orchestration workflows
+Linked services and datasets
+Source and target configurations
+Incremental-load framework
+Watermarks, CDC, or equivalent load logic
+Error-handling framework
+Logging, retries, and exception management
+Test cases and results
+Unit, integration, regression, and UAT evidence
+CI/CD pipelines
+Automated deployment across environments
+Monitoring setup
+Alerts, diagnostics, and operational dashboards
+Technical documentation
+Architecture, dependencies, and configuration
+Support runbook
+Failure recovery and production procedures
+
+Typical Azure Data Engineer responsibilities
+Design, develop, and maintain Azure Data Factory pipelines.
+Build reusable ingestion frameworks for multiple source systems.
+Implement full and incremental data loads.
+Develop data transformation and validation logic.
+Optimize pipeline performance and Azure resource costs.
+Implement security, monitoring, and automated deployments.
+Troubleshoot production issues and maintain data quality.
+Collaborate with data architects, analysts, testers, and business teams.
+Perform root-cause analysis and implement permanent fixes.
+Maintain operational runbooks and support documentation.
