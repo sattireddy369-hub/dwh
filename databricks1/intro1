@@ -1,0 +1,140 @@
+Detailed project task list
+Phase
+Overall tasks
+Databricks technologies
+1. Requirement gathering
+Understand business requirements, source systems, KPIs and SLAs
+Databricks workspace planning
+2. Source analysis
+Identify tables, columns, data types, volume and data quality issues
+SQL, JDBC, APIs
+3. Environment setup
+Configure development, test and production environments
+Workspaces, Unity Catalog
+4. Data ingestion
+Load data from databases, APIs, CSV, JSON, Parquet and cloud storage
+Auto Loader, Lakeflow Connect, Spark
+5. Bronze development
+Ingest raw data and capture load timestamps and source metadata
+Delta Lake
+6. Silver development
+Cleanse data, handle nulls, deduplicate, validate and join datasets
+PySpark, Spark SQL
+7. Gold development
+Create fact tables, dimension tables, aggregates and business KPIs
+Delta tables, SQL
+8. Incremental processing
+Process new and changed records; implement CDC and merge logic
+MERGE INTO, Change Data Feed
+9. Orchestration
+Schedule notebooks, pipelines and dependencies
+Lakeflow Jobs
+10. Data quality
+Apply validation rules, reconciliation and exception handling
+Expectations, SQL, PySpark
+11. Security
+Configure permissions, service principals, secrets and access policies
+Unity Catalog
+12. Performance tuning
+Optimize queries, file sizes and pipeline execution
+Photon, liquid clustering, query profiles
+13. Testing
+Unit, integration, reconciliation, regression and performance testing
+PyTest, SQL, pipeline tests
+14. Deployment
+Promote code and configuration between environments
+Git, Databricks Asset Bundles
+15. Monitoring
+Monitor failures, freshness, data quality, costs and SLAs
+Jobs monitoring, system tables
+16. Documentation and handover
+
+
+
+
+
+Typical daily responsibilities of a Databricks data engineer
+Develop PySpark and SQL notebooks for data transformations.
+Build and maintain ingestion pipelines from source systems.
+Implement Bronze, Silver and Gold Delta tables.
+Develop incremental loads and CDC processing.
+Create reusable functions and configuration-driven pipelines.
+Schedule workflows and configure dependencies.
+Validate source-to-target data counts and business rules.
+Troubleshoot failed jobs and resolve data quality issues.
+Optimize Spark jobs and SQL queries.
+Manage code through Git and deploy changes across environments.
+Monitor production pipelines and meet SLA requirements.
+Coordinate with business analysts, source-system teams and BI developers.
+
+4. Example project workflow
+Consider a retail analytics project that loads customer, product, order and sales data from a SQL Server database.
+Ingest source data: Load customer, product and sales tables into Databricks.
+Create Bronze tables: Store raw records in Delta tables with ingestion timestamps.
+Create Silver tables: Remove duplicates, validate customer IDs, handle null values and standardize dates.
+Implement incremental loads: Process only new or changed records using watermarks or CDC.
+Create Gold tables: Build sales fact tables, customer dimensions and daily sales summaries.
+Orchestrate pipelines: Schedule ingestion and transformation jobs with dependencies and retries.
+Perform testing: Compare source and target counts, validate totals and check business rules.
+Deploy to production: Promote tested code and configure production schedules and alerts.
+Support production: Investigate failures, correct data issues and monitor pipeline performance.
+Document mappings, architecture, dependencies and operational support
+
+
+
+ Project deliverables checklist
+Project completion tracker
+0 of 12
+
+Source-to-target mapping document
+
+Solution architecture and data flow diagram
+
+Databricks workspace and Unity Catalog setup
+
+Bronze ingestion pipelines
+
+Silver transformation pipelines
+
+Gold business tables and KPIs
+
+Incremental load and CDC framework
+
+Data quality and reconciliation checks
+
+Scheduled workflows and alerting
+
+Unit, integration and performance test results
+
+Git repository and deployment configuration
+
+Production monitoring and support runbook
+6. Recommended project phases
+Phase
+Typical duration
+Requirement gathering and design
+1–2 weeks
+Environment setup and ingestion
+1–3 weeks
+Bronze, Silver and Gold development
+3–6 weeks
+Testing and performance tuning
+1–3 weeks
+Deployment and production handover
+1–2 weeks
+
+
+ End-to-end project tasks
+1. Source Systems
+SQL databases, APIs, files, SAP, Salesforce, cloud storage
+2. Data Ingestion
+Auto Loader, Lakeflow Connect, ADF, batch or streaming ingestion
+3. Bronze Layer — Raw Data
+Store source data, preserve history, track ingestion metadata
+4. Silver Layer — Cleansed Data
+Data cleansing, validation, deduplication, joins and transformations
+5. Gold Layer — Business Data
+Aggregations, KPIs, business rules, reporting-ready tables
+6. Data Consumption
+Power BI, Databricks SQL, dashboards and downstream applications
+Repos, notebooks, project documentation
